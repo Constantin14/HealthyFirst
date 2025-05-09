@@ -1,0 +1,66 @@
+table, th, td {
+  border: 2px solid black;
+border-collapse: collapse;
+
+
+}
+table tr:nth-child(odd) {
+  background-color: #c5bfbf;
+}
+table tr:nth-child(even) {
+  background-color: white;
+}
+
+button {
+  border-image: linear-gradient(to right, #323232, #c5bfbf) 1;
+  border-width: 4px;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 12px;
+  cursor: pointer;
+-webkit-transition-duration: 0.4s;
+transition-duration: 0.4s;
+  
+}
+
+button:hover {
+background-color: #c5bfbf;
+color: black;
+}    
+
+#buttons {
+margin: 20px;
+}
+
+#hour {
+text-align: center;
+font-weight: bold;
+
+}
+
+#calories {
+text-align: center;
+font-weight:lighter;
+
+}
+
+#protein {
+text-align: center;
+color: blue;
+}
+
+#carbo {
+text-align: center;
+color: green;
+}
+
+#fats {
+text-align: center;
+color: red;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}

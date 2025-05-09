@@ -1,0 +1,51 @@
+<input type="text" [(ngModel)]="searchText" placeholder="Find food..." />
+<ul>
+<li>
+<button (click)="getAllFood()">Show All Food</button>
+</li>
+<li>
+<button (click)="getAllCarbs()">Show All Carbs</button>
+</li>
+<li>
+<button (click)="getAllVegy()">Show All Vegetables</button>
+</li>
+<li>
+<button (click)="getAllFruits()">Show All Fruit</button>
+</li>
+<li>
+<button (click)="getAllMeat()">Show All Meat</button>
+</li>
+<li>
+<button (click)="getAllProteins()">Show All Proteins</button>
+</li>
+<li>
+<button (click)="getAllFats()">Show All Fats</button>
+</li>
+</ul>
+
+
+
+<table>
+  <thead>
+    <th>Food Name</th>
+    <th>Food Type</th>
+    <th>Calories Number</th>
+    <th>Protein Number</th>
+    <th>Fats Number</th>
+    <th>Carbs Number</th>
+    <th>Fibre Number</th>
+  </thead>
+  @for (food of filteredFoods(); track $index) { 
+<tr>
+  <td>{{ food.name }}</td>
+  <td>{{food.foodType}}</td>
+  <td>{{food.calsNum}} Kcals</td>
+  <td>{{food.proteinNum}} Protein</td>
+  <td>{{food.fatsNum}} Fats</td>
+  <td>{{food.carbsNum}} Carbs</td>
+  <td>{{food.fibreNum}} Fibre</td>
+</tr>
+}
+</table>
+
+

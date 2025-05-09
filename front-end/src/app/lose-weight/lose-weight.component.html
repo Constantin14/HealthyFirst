@@ -1,0 +1,1097 @@
+<div>
+    Add your weight in kg<input type="number" [(ngModel)]="bodyW" placeholder="Add weight">
+    <label>When do you eat your first meal of the day? </label>    
+    <input type="number" [(ngModel)]="dailyMealWork" placeholder="Add hour"> 
+    <h3>Select the days you exercise:</h3>
+    <div>
+        <div>
+        <label>Monday</label>
+        <input (click)="callMondayCounter()" type="checkbox" [(ngModel)] = "activeDays.monday">
+        @if(activeDays.monday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetMondayCheckBox1()" type="checkbox" [(ngModel)] = "mondayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetMondayCheckBox2()" type="checkbox" [(ngModel)] = "mondayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetMondayCheckBox3()" type="checkbox" [(ngModel)] = "mondayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetMondayCheckBox4()" type="checkbox" [(ngModel)] = "mondayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetMondayCheckBox5()" type="checkbox" [(ngModel)] = "mondayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+        <label>Tuesday</label>
+        <input (click)="callTuesdayCounter()" type="checkbox" [(ngModel)] = "activeDays.tuesday">
+        @if(activeDays.tuesday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetTuesdayCheckBox1()" type="checkbox" [(ngModel)] = "tuesdayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetTuesdayCheckBox2()" type="checkbox" [(ngModel)] = "tuesdayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetTuesdayCheckBox3()" type="checkbox" [(ngModel)] = "tuesdayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetTuesdayCheckBox4()" type="checkbox" [(ngModel)] = "tuesdayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetTuesdayCheckBox5()" type="checkbox" [(ngModel)] = "tuesdayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+         <label>Wednesday</label>
+        <input (click)="callWednesdayCounter()" type="checkbox" [(ngModel)] = "activeDays.wednesday">
+        @if(activeDays.wednesday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetWednesdayCheckBox1()" type="checkbox" [(ngModel)] = "wednesdayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetWednesdayCheckBox2()" type="checkbox" [(ngModel)] = "wednesdayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetWednesdayCheckBox3()" type="checkbox" [(ngModel)] = "wednesdayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetWednesdayCheckBox4()" type="checkbox" [(ngModel)] = "wednesdayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetWednesdayCheckBox5()" type="checkbox" [(ngModel)] = "wednesdayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+        <label>Thursday</label>
+        <input (click)="callThursdayCounter()" type="checkbox" [(ngModel)] = "activeDays.thursday">
+        @if(activeDays.thursday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetThursdayCheckBox1()" type="checkbox" [(ngModel)] = "thursdayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetThursdayCheckBox2()" type="checkbox" [(ngModel)] = "thursdayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetThursdayCheckBox3()" type="checkbox" [(ngModel)] = "thursdayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetThursdayCheckBox4()" type="checkbox" [(ngModel)] = "thursdayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetThursdayCheckBox5()" type="checkbox" [(ngModel)] = "thursdayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+        <label>Friday</label>
+        <input (click)="callFridayCounter()" type="checkbox" [(ngModel)] = "activeDays.friday">
+        @if(activeDays.friday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetFridayCheckBox1()" type="checkbox" [(ngModel)] = "fridayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetFridayCheckBox2()" type="checkbox" [(ngModel)] = "fridayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetFridayCheckBox3()" type="checkbox" [(ngModel)] = "fridayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetFridayCheckBox4()" type="checkbox" [(ngModel)] = "fridayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetFridayCheckBox5()" type="checkbox" [(ngModel)] = "fridayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+        <label>Saturday</label>
+        <input (click)="callSaturdayCounter()" type="checkbox" [(ngModel)] = "activeDays.saturday">
+        @if(activeDays.saturday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetSaturdayCheckBox1()" type="checkbox" [(ngModel)] = "saturdayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetSaturdayCheckBox2()" type="checkbox" [(ngModel)] = "saturdayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetSaturdayCheckBox3()" type="checkbox" [(ngModel)] = "saturdayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetSaturdayCheckBox4()" type="checkbox" [(ngModel)] = "saturdayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetSaturdayCheckBox5()" type="checkbox" [(ngModel)] = "saturdayMeals.afterFourthMeal">
+            }
+        </div>
+        <div>
+        <label>Sunday</label>
+        <input (click)="callSundayCounter()" type="checkbox" [(ngModel)] = "activeDays.sunday">
+        @if(activeDays.sunday){
+            <label>Select your sport interval:    </label>
+            <input (click)="resetSundayCheckBox1()" type="checkbox" [(ngModel)] = "sundayMeals.beforeFirstMeal">
+            <label> First Meal </label>
+            <input (click)="resetSundayCheckBox2()" type="checkbox" [(ngModel)] = "sundayMeals.beforeSecondMeal">
+            <label> Second Meal </label>
+            <input (click)="resetSundayCheckBox3()" type="checkbox" [(ngModel)] = "sundayMeals.beforeThirdMeal">
+            <label> Third Meal </label>
+            <input (click)="resetSundayCheckBox4()" type="checkbox" [(ngModel)] = "sundayMeals.beforeFourthMeal">
+            <label> Fourth Meal </label>
+            <input (click)="resetSundayCheckBox5()" type="checkbox" [(ngModel)] = "sundayMeals.afterFourthMeal">
+            }
+        </div>
+    </div>
+    @if(sportDayCounter<2){
+    <h3>You are a sedentary person, you need:</h3> 
+    <table>
+        <thead>
+            <th>Kcal Number</th>
+            <th>Fats Number</th>
+            <th>Protein Number</th>
+            <th>Carbo Number</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minim {{caloriesMinNumber()}}kCal</td>
+                <td>{{calcFatsMin1()}}g fats</td>
+                <td>{{calcProtCarbNum1()}}g protein</td>
+                <td>{{calcProtCarbNum1()}}g carbo</td>
+            </tr>
+            <tr>
+                <td>Maxim {{caloriesMaxNumber()}}kCal</td>
+                <td>{{calcFatsMax1()}}g fats</td>
+                <td>{{calcProtCarbNum1()}}g protein</td>
+                <td>{{calcProtCarbNum1()}}g carbo</td>
+            </tr>
+        </tbody>   
+    </table>
+     
+    <table>
+        <thead>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealMondayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealMondayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealMondayFats1Min()}}-{{firstMealMondayFats1Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealTuesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealTuesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealTuesdayFats1Min()}}-{{firstMealTuesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealWednesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealWednesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealWednesdayFats1Min()}}-{{firstMealWednesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealThursdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealThursdayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealThursdayFats1Min()}}-{{firstMealThursdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealFridayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealFridayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealFridayFats1Min()}}-{{firstMealFridayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSaturdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSaturdayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealSaturdayFats1Min()}}-{{firstMealSaturdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSundayProt1()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSundayCarb1()}}g</div>
+                    <div id="fats">Fats {{firstMealSundayFats1Min()}}-{{firstMealSundayFats1Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealMondayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealMondayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealMondayFats1Min()}}-{{secondMealMondayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealTuesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealTuesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealTuesdayFats1Min()}}-{{secondMealTuesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealWednesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealWednesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealWednesdayFats1Min()}}-{{secondMealWednesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealThursdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealThursdayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealThursdayFats1Min()}}-{{secondMealThursdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealFridayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealFridayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealFridayFats1Min()}}-{{secondMealFridayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSaturdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSaturdayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealSaturdayFats1Min()}}-{{secondMealSaturdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSundayProt1()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSundayCarb1()}}g</div>
+                    <div id="fats">Fats {{secondMealSundayFats1Min()}}-{{secondMealSundayFats1Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealMondayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealMondayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealMondayFats1Min()}}-{{thirdMealMondayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealTuesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealTuesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealTuesdayFats1Min()}}-{{thirdMealTuesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealWednesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealWednesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealWednesdayFats1Min()}}-{{thirdMealWednesdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealThursdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealThursdayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealThursdayFats1Min()}}-{{thirdMealThursdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealFridayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealFridayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealFridayFats1Min()}}-{{thirdMealFridayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSaturdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSaturdayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealSaturdayFats1Min()}}-{{thirdMealSaturdayFats1Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSundayProt1()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSundayCarb1()}}g</div>
+                    <div id="fats">Fats {{thirdMealSundayFats1Min()}}-{{thirdMealSundayFats1Max()}}g</div>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealMondayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealMondayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealMondayFats1Min()}}-{{fourthMealMondayFats1Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealTuesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealTuesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealTuesdayFats1Min()}}-{{fourthMealTuesdayFats1Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealWednesdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealWednesdayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealWednesdayFats1Min()}}-{{fourthMealWednesdayFats1Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealThursdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealThursdayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealThursdayFats1Min()}}-{{fourthMealThursdayFats1Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealFridayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealFridayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealFridayFats1Min()}}-{{fourthMealFridayFats1Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSaturdayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSaturdayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealSaturdayFats1Min()}}-{{fourthMealSaturdayFats1Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSundayProt1()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSundayCarb1()}}g</div>
+                    <div id="fats">Fats {{fourthMealSundayFats1Min()}}-{{fourthMealSundayFats1Max()}}g</div>
+                </td>
+            </tr>
+    
+            <tr></tr>
+        </tbody>
+    </table>  
+}
+    @if (sportDayCounter == 2 || sportDayCounter == 3) {
+    <h3>You exercise 2 or 3 times a week, you need</h3>
+    <table>
+        <thead>
+            <th>Kcal Number</th>
+            <th>Fats Number</th>
+            <th>Protein Number</th>
+            <th>Carbo Number</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minim {{caloriesMinNumber()}}kCal</td>
+                <td>{{calcFatsMin2()}}g fats</td>
+                <td>{{calcProtCarbNum2()}}g protein</td>
+                <td>{{calcProtCarbNum2()}}g carbo</td>
+            </tr>
+            <tr>
+                <td>Maxim {{caloriesMaxNumber()}}kCal</td>
+                <td>{{calcFatsMax2()}}g fats</td>
+                <td>{{calcProtCarbNum2()}}g protein</td>
+                <td>{{calcProtCarbNum2()}}g carbo</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealMondayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealMondayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealMondayFats2Min()}}-{{firstMealMondayFats2Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealTuesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealTuesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealTuesdayFats2Min()}}-{{firstMealTuesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealWednesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealWednesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealWednesdayFats2Min()}}-{{firstMealWednesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealThursdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealThursdayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealThursdayFats2Min()}}-{{firstMealThursdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealFridayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealFridayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealFridayFats2Min()}}-{{firstMealFridayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSaturdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSaturdayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealSaturdayFats2Min()}}-{{firstMealSaturdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSundayProt2()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSundayCarb2()}}g</div>
+                    <div id="fats">Fats {{firstMealSundayFats2Min()}}-{{firstMealSundayFats2Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealMondayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealMondayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealMondayFats2Min()}}-{{secondMealMondayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealTuesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealTuesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealTuesdayFats2Min()}}-{{secondMealTuesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealWednesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealWednesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealWednesdayFats2Min()}}-{{secondMealWednesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealThursdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealThursdayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealThursdayFats2Min()}}-{{secondMealThursdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealFridayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealFridayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealFridayFats2Min()}}-{{secondMealFridayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSaturdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSaturdayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealSaturdayFats2Min()}}-{{secondMealSaturdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSundayProt2()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSundayCarb2()}}g</div>
+                    <div id="fats">Fats {{secondMealSundayFats2Min()}}-{{secondMealSundayFats2Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealMondayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealMondayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealMondayFats2Min()}}-{{thirdMealMondayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealTuesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealTuesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealTuesdayFats2Min()}}-{{thirdMealTuesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealWednesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealWednesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealWednesdayFats2Min()}}-{{thirdMealWednesdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealThursdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealThursdayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealThursdayFats2Min()}}-{{thirdMealThursdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealFridayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealFridayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealFridayFats2Min()}}-{{thirdMealFridayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSaturdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSaturdayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealSaturdayFats2Min()}}-{{thirdMealSaturdayFats2Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSundayProt2()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSundayCarb2()}}g</div>
+                    <div id="fats">Fats {{thirdMealSundayFats2Min()}}-{{thirdMealSundayFats2Max()}}g</div>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealMondayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealMondayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealMondayFats2Min()}}-{{fourthMealMondayFats2Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealTuesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealTuesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealTuesdayFats2Min()}}-{{fourthMealTuesdayFats2Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealWednesdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealWednesdayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealWednesdayFats2Min()}}-{{fourthMealWednesdayFats2Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealThursdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealThursdayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealThursdayFats2Min()}}-{{fourthMealThursdayFats2Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealFridayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealFridayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealFridayFats2Min()}}-{{fourthMealFridayFats2Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSaturdayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSaturdayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealSaturdayFats2Min()}}-{{fourthMealSaturdayFats2Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSundayProt2()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSundayCarb2()}}g</div>
+                    <div id="fats">Fats {{fourthMealSundayFats2Min()}}-{{fourthMealSundayFats2Max()}}g</div>
+                </td>
+            </tr>
+    
+            <tr></tr>
+        </tbody>
+    </table>  
+}
+    @if(sportDayCounter == 4 || sportDayCounter == 5){
+    <h3>You exercise 4 or 5 times a week, you need</h3>
+    <table>
+        <thead>
+            <th>Kcal Number</th>
+            <th>Fats Number</th>
+            <th>Protein Number</th>
+            <th>Carbo Number</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minim {{caloriesMinNumber()}}kCal</td>
+                <td>{{calcFatsMin3()}}g fats</td>
+                <td>{{calcProtCarbNum3()}}g protein</td>
+                <td>{{calcProtCarbNum3()}}g carbo</td>
+            </tr>
+            <tr>
+                <td>Maxim {{caloriesMaxNumber()}}kCal</td>
+                <td>{{calcFatsMax3()}}g fats</td>
+                <td>{{calcProtCarbNum3()}}g protein</td>
+                <td>{{calcProtCarbNum3()}}g carbo</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealMondayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealMondayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealMondayFats3Min()}}-{{firstMealMondayFats3Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealTuesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealTuesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealTuesdayFats3Min()}}-{{firstMealTuesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealWednesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealWednesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealWednesdayFats3Min()}}-{{firstMealWednesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealThursdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealThursdayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealThursdayFats3Min()}}-{{firstMealThursdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealFridayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealFridayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealFridayFats3Min()}}-{{firstMealFridayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSaturdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSaturdayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealSaturdayFats3Min()}}-{{firstMealSaturdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSundayProt3()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSundayCarb3()}}g</div>
+                    <div id="fats">Fats {{firstMealSundayFats3Min()}}-{{firstMealSundayFats3Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealMondayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealMondayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealMondayFats3Min()}}-{{secondMealMondayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealTuesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealTuesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealTuesdayFats3Min()}}-{{secondMealTuesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealWednesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealWednesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealWednesdayFats3Min()}}-{{secondMealWednesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealThursdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealThursdayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealThursdayFats3Min()}}-{{secondMealThursdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealFridayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealFridayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealFridayFats3Min()}}-{{secondMealFridayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSaturdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSaturdayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealSaturdayFats3Min()}}-{{secondMealSaturdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSundayProt3()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSundayCarb3()}}g</div>
+                    <div id="fats">Fats {{secondMealSundayFats3Min()}}-{{secondMealSundayFats3Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealMondayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealMondayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealMondayFats3Min()}}-{{thirdMealMondayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealTuesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealTuesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealTuesdayFats3Min()}}-{{thirdMealTuesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealWednesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealWednesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealWednesdayFats3Min()}}-{{thirdMealWednesdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealThursdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealThursdayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealThursdayFats3Min()}}-{{thirdMealThursdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealFridayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealFridayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealFridayFats3Min()}}-{{thirdMealFridayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSaturdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSaturdayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealSaturdayFats3Min()}}-{{thirdMealSaturdayFats3Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSundayProt3()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSundayCarb3()}}g</div>
+                    <div id="fats">Fats {{thirdMealSundayFats3Min()}}-{{thirdMealSundayFats3Max()}}g</div>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealMondayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealMondayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealMondayFats3Min()}}-{{fourthMealMondayFats3Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealTuesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealTuesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealTuesdayFats3Min()}}-{{fourthMealTuesdayFats3Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealWednesdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealWednesdayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealWednesdayFats3Min()}}-{{fourthMealWednesdayFats3Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealThursdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealThursdayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealThursdayFats3Min()}}-{{fourthMealThursdayFats3Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealFridayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealFridayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealFridayFats3Min()}}-{{fourthMealFridayFats3Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSaturdayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSaturdayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealSaturdayFats3Min()}}-{{fourthMealSaturdayFats3Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSundayProt3()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSundayCarb3()}}g</div>
+                    <div id="fats">Fats {{fourthMealSundayFats3Min()}}-{{fourthMealSundayFats3Max()}}g</div>
+                </td>
+            </tr>
+    
+            <tr></tr>
+        </tbody>
+    </table>  
+}
+    @if(sportDayCounter>5){
+    <h3>You are a professional athlete, you need</h3>
+    <table>
+        <thead>
+            <th>Kcal Number</th>
+            <th>Fats Number</th>
+            <th>Protein Number</th>
+            <th>Carbo Number</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minim {{caloriesMinNumber()}}kCal</td>
+                <td>{{calcFatsMin4()}}g fats</td>
+                <td>{{calcProtCarbNum4()}}g protein</td>
+                <td>{{calcProtCarbNum4()}}g carbo</td>
+            </tr>
+            <tr>
+                <td>Maxim {{caloriesMaxNumber()}}kCal</td>
+                <td>{{calcFatsMax4()}}g fats</td>
+                <td>{{calcProtCarbNum4()}}g protein</td>
+                <td>{{calcProtCarbNum4()}}g carbo</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealMondayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealMondayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealMondayFats4Min()}}-{{firstMealMondayFats4Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealTuesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealTuesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealTuesdayFats4Min()}}-{{firstMealTuesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealWednesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealWednesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealWednesdayFats4Min()}}-{{firstMealWednesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealThursdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealThursdayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealThursdayFats4Min()}}-{{firstMealThursdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealFridayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealFridayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealFridayFats4Min()}}-{{firstMealFridayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSaturdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSaturdayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealSaturdayFats4Min()}}-{{firstMealSaturdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">First meal: {{calcWorkMeal1()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{firstMealSundayProt4()}}g</div>
+                    <div id="carbo">Carbs {{firstMealSundayCarb4()}}g</div>
+                    <div id="fats">Fats {{firstMealSundayFats4Min()}}-{{firstMealSundayFats4Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealMondayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealMondayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealMondayFats4Min()}}-{{secondMealMondayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealTuesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealTuesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealTuesdayFats4Min()}}-{{secondMealTuesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealWednesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealWednesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealWednesdayFats4Min()}}-{{secondMealWednesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealThursdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealThursdayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealThursdayFats4Min()}}-{{secondMealThursdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealFridayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealFridayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealFridayFats4Min()}}-{{secondMealFridayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSaturdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSaturdayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealSaturdayFats4Min()}}-{{secondMealSaturdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Second meal: {{calcWorkMeal2()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{secondMealSundayProt4()}}g</div>
+                    <div id="carbo">Carbs {{secondMealSundayCarb4()}}g</div>
+                    <div id="fats">Fats {{secondMealSundayFats4Min()}}-{{secondMealSundayFats4Max()}}g</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealMondayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealMondayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealMondayFats4Min()}}-{{thirdMealMondayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealTuesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealTuesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealTuesdayFats4Min()}}-{{thirdMealTuesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealWednesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealWednesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealWednesdayFats4Min()}}-{{thirdMealWednesdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealThursdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealThursdayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealThursdayFats4Min()}}-{{thirdMealThursdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealFridayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealFridayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealFridayFats4Min()}}-{{thirdMealFridayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSaturdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSaturdayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealSaturdayFats4Min()}}-{{thirdMealSaturdayFats4Max()}}g</div>
+                </td>
+                <td>
+                    <div id="hour">Third meal: {{calcWorkMeal3()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{thirdMealSundayProt4()}}g</div>
+                    <div id="carbo">Carbs {{thirdMealSundayCarb4()}}g</div>
+                    <div id="fats">Fats {{thirdMealSundayFats4Min()}}-{{thirdMealSundayFats4Max()}}g</div>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealMondayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealMondayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealMondayFats4Min()}}-{{fourthMealMondayFats4Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealTuesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealTuesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealTuesdayFats4Min()}}-{{fourthMealTuesdayFats4Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealWednesdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealWednesdayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealWednesdayFats4Min()}}-{{fourthMealWednesdayFats4Max()}}g</div>
+                </td>    
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealThursdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealThursdayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealThursdayFats4Min()}}-{{fourthMealThursdayFats4Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealFridayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealFridayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealFridayFats4Min()}}-{{fourthMealFridayFats4Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSaturdayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSaturdayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealSaturdayFats4Min()}}-{{fourthMealSaturdayFats4Max()}}g</div>
+                </td>   
+                <td>
+                    <div id="hour">Fourth meal: {{calcWorkMeal4()}}:00</div>
+                    <div id="calories">{{caloriesMeals1Min()}}Kcal - {{caloriesMeals1Max()}}Kcal</div>
+                    <div id="protein">Protein {{fourthMealSundayProt4()}}g</div>
+                    <div id="carbo">Carbs {{fourthMealSundayCarb4()}}g</div>
+                    <div id="fats">Fats {{fourthMealSundayFats4Min()}}-{{fourthMealSundayFats4Max()}}g</div>
+                </td>
+            </tr>
+    
+            <tr></tr>
+        </tbody>
+    </table>  
+}
+<div>  

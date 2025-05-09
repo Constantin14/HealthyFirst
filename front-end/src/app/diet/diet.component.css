@@ -1,0 +1,27 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  li {
+    display: list-item;
+    padding: 5px;
+    background-color: #c5bfbf;
+    width: 100px;
+    border: 1px solid white;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .active-link {
+    padding: 5px;
+    background-color: #555555;
+  }
+
+  li:hover {
+    background-color: #555555;
+    padding: 5px;
+  } 
