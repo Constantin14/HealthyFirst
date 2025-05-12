@@ -24,4 +24,13 @@ Application Requirements
 - The distribution of protein, carbohydrates, and fats shall be based on recommendations from the book Forever Strong.
 - The application shall provide a workout plan, including links to videos or descriptions for each exercise.
 
-Below are some images from the application, we can see an example of a personalized food program for a person with a body weight of 75 kg who exercises three times a week and has his first meal at 11 am.
+Below are some images from the application, we can see an example of a personalized food program for a person with a body weight of 75 kg who exercises three times a week and has his first meal at 11 am and want to maintain body weight.
+![User](https://github.com/user-attachments/assets/643a2b44-0886-4a06-ba41-1e5c840d195e)
+![FoodList](https://github.com/user-attachments/assets/51a3063b-2fde-4835-8a47-4bfff8998b0b)
+![LoseKeepGain](https://github.com/user-attachments/assets/408f9d6b-029e-4716-8ff7-863cc3f06224)
+![SportInterval](https://github.com/user-attachments/assets/2a01b87a-2496-400a-a8be-e1253a1d7de8)
+![DietTable](https://github.com/user-attachments/assets/161b652f-1809-4337-acea-1c36b8404a21)
+![SportProgram](https://github.com/user-attachments/assets/2af4c586-7bae-450a-9eb5-c0406d908f57)
+
+
+
