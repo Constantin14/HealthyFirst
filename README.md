@@ -10,7 +10,7 @@ A sports program, which contains links for each exercise, so that they can be ex
 
 Application Requirements
 
-the appliction should allow users to create accounts
-in order to use the personal library users must log in
-the user shall be able to log out
-the application shall logged out the user automatically after 30 minutes of inactivity
+- the appliction should allow users to create accounts
+- in order to use the personal library users must log in
+- the user shall be able to log out
+- the application shall logged out the user automatically after 30 minutes of inactivity
