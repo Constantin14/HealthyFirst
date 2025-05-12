@@ -10,7 +10,16 @@ This application was created based on information from "Forever Strong" by Dr. G
 
 Application Requirements
 
-- the appliction should allow users to create accounts
-- in order to use the personal library users must log in
-- the user shall be able to log out
-- the application shall logged out the user automatically after 30 minutes of inactivity
+- The application shall allow users to create an account.
+- In order to access the features of HealthyFirst, users must log in.
+- Users shall be able to log out manually at any time.
+- The application shall automatically log out users after 30 minutes of inactivity.
+- The application shall include a database containing a list of foods.
+- The application shall provide filters (e.g., category, calories, macronutrients) to search the food list.
+- The application shall include a calculator for daily calories and macronutrient needs.
+- Users shall be able to choose a goal: lose weight, maintain weight, or gain weight.
+- The calculator shall accept user inputs such as body weight and physical activity level.
+- The application shall calculate the daily required intake of calories and macronutrients (protein, carbohydrates, fats).
+- The application shall generate a meal plan with four meals per day for each day of the week.
+- The distribution of protein, carbohydrates, and fats shall be based on recommendations from the book Forever Strong.
+- The application shall provide a workout plan, including links to videos or descriptions for each exercise.
