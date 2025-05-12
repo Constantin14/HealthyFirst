@@ -23,3 +23,5 @@ Application Requirements
 - The application shall generate a meal plan with four meals per day for each day of the week.
 - The distribution of protein, carbohydrates, and fats shall be based on recommendations from the book Forever Strong.
 - The application shall provide a workout plan, including links to videos or descriptions for each exercise.
+
+Below are some images from the application, we can see an example of a personalized food program for a person with a body weight of 75 kg who exercises three times a week and has his first meal at 11 am.
