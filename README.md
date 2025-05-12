@@ -25,6 +25,10 @@ Application Requirements
 - The application shall provide a workout plan, including links to videos or descriptions for each exercise.
 
 Below are some images from the application, we can see an example of a personalized food program for a person with a body weight of 75 kg who exercises three times a week and has his first meal at 11 am and want to maintain body weight.
+You can see some details in the generated table, such as: 
+- Meals before and after sports have less fat
+- The number of carbohydrates is lower before sports and higher after sports
+- The number of proteins consumed after sports is lower, this meal can be replaced with a protein shake.
 ![User](https://github.com/user-attachments/assets/643a2b44-0886-4a06-ba41-1e5c840d195e)
 ![FoodList](https://github.com/user-attachments/assets/51a3063b-2fde-4835-8a47-4bfff8998b0b)
 ![LoseKeepGain](https://github.com/user-attachments/assets/408f9d6b-029e-4716-8ff7-863cc3f06224)
